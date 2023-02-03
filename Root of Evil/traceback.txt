@@ -1,0 +1,32 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 56, in script
+    show eileen happy at slightleft
+  File "game/script.rpy", line 56, in <module>
+    show eileen happy at slightleft
+NameError: name 'slightleft' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 56, in script
+    show eileen happy at slightleft
+  File "C:\Users\Lori\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 1408, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\Lori\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 1367, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\Users\Lori\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 1367, in <listcomp>
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\Users\Lori\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Lori\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 56, in <module>
+    show eileen happy at slightleft
+NameError: name 'slightleft' is not defined
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.0.3.22090809
+Root of Evil 1.0
+Thu Feb  2 20:33:08 2023
