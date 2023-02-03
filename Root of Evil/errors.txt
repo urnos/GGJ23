@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 101: reached end of line when expecting ':'.
-    if q1 == True and q2 == True 
-                                 ^
+File "game/script.rpy", line 72: end of line expected.
+    show bubble uwu at rightish behind villainess default
+                                                  ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Feb  2 22:31:31 2023
+Thu Feb  2 23:53:07 2023

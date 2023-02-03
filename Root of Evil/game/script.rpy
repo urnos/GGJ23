@@ -6,15 +6,27 @@
 define p = Character("Plant", color="#7CFC00")
 define v = Character("Villainess", color="#880808")
 
+image villainess_default = "villainess.png"
+
+image bubble uwu = "bubble_uwu.png"
+
+
 define q1 = False
 define q2 = False
 
 define react1_good = False
 
 transform right:
-    xalign 0.75
+    xalign 0.85
     yalign 1.0
 
+transform right_bubble:
+    xalign 0.6
+    yalign 0.3
+
+transform plant_bubble:
+    xalign 0.10
+    yalign 0.7
 
 # Introduction scene, Main plot point 1
 
@@ -31,6 +43,8 @@ label start:
     # directory.
 
     # These display lines of dialogue.
+
+    show bubble uwu at plant_bubble
 
     p "The garden is warm and quiet, with the faint noise of fountains bubbling on the other end of the house."
 
@@ -58,7 +72,10 @@ label start:
 
     p "Who's that?"
 
-    show eileen happy at right
+    show villainess_default at right
+
+    show bubble uwu at right_bubble behind villainess_default
+ 
 
     p "Is that the duchess?"
 
