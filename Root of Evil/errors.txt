@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 30: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    "The silence is comforting when you think about it."
-    ^
+File "game/script.rpy", line 101: reached end of line when expecting ':'.
+    if q1 == True and q2 == True 
+                                 ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Feb  2 20:04:03 2023
+Thu Feb  2 22:31:31 2023
