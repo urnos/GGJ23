@@ -6,3 +6,5 @@ log.txt
 errors.txt
 traceback.txt
 files.txt
+*.save
+*.rpyb
