@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 123: expected end of line
-    play sfx_qanda fadein 0.1
-                          ^
+File "game/mpp2.rpy", line 203: expected end of line
+    stop music bg_v_jealous fadeout 2.0
+               ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Feb  4 14:58:17 2023
+Sat Feb  4 15:52:32 2023

@@ -6,6 +6,9 @@
 # Main plot point 2
 
 label mpp2_start:
+
+    play music bg_default
+
     scene bg_greenhouse
 
     p "It's been some time since the Duchess began to visit me in the garden."
@@ -16,6 +19,10 @@ label mpp2_start:
     p "The best way to care for a plant like me is to keep on talking to me, talking to someone always makes me feel better."
     p "That way I can grow and learn like I've always wanted."
 
+    stop music fadeout 1.2
+
+    play sound sfx_click
+
     "{i}Click.{/i}"
 
     show exp_p_joy onlayer screens at plant_bubble zorder 1
@@ -23,6 +30,8 @@ label mpp2_start:
     hide exp_p_joy onlayer screens
 
     p "{i}I sense strong emotions coming from her direction.{/i}"
+
+    play music bg_v_jealous fadein 1.2
 
     show villainess_default at right
     with dissolve
@@ -83,6 +92,9 @@ label mpp2_start:
     p "{i}Her emotions are so strong today.{/i}"
     p "{i}It's good that she's letting her feelings out.{/i}"
 
+    stop music fadeout 1.0
+
+    play sound sfx_qanda fadein 0.1 
 
     $ q1 = False
     $ q2 = False
@@ -91,6 +103,15 @@ label mpp2_start:
 
     label mpp2_interview:
     #interview segment
+
+    #when the sfx is done then fade in bgm music
+
+    define qa2bgm_isPlaying = False
+    #start the track only if the q&a bgm isn't playing
+    if qa2bgm_isPlaying == False:
+        play  music bg_mpp2_qanda fadeout 1.5 fadein 2.0 volume 0.5
+        #turn q&a music toggle on 
+        $ qa2bgm_isPlaying = True
 
     menu: 
 
@@ -177,7 +198,7 @@ label mpp2_start:
 
 
     #after asking both questions
-    label question_finish_2: 
+    label question_finish_2:  
 
     v "I can't just stand by and have that girl steal him away."
 
@@ -191,6 +212,7 @@ label mpp2_start:
 
     #reaction choices
     menu:
+ 
 
         "Discourage":
             jump discourage
@@ -243,4 +265,5 @@ label mpp2_start:
 
         p "Goodbye and goodluck!"
 
+        stop music fadeout 2.0
         jump mpp3_start 

@@ -292,4 +292,5 @@ label mpp1_end:
     p "Always!"
     v "Perhaps I will keep our conversations a secret, who knows how other people will react to find that I talk to plants when I'm alone, haha."
 
+    stop music fadeout 1.0
     jump mpp2_start
