@@ -5,7 +5,9 @@
 
 # Main plot point 3
 
+#These can be moved to Variable script
 define f = Character("Fiance", color="#ffffff")
+image bg_black = "TempBG_Black.png"
 
 label mpp3_start:
     play music bg_default
@@ -106,7 +108,7 @@ label mpp3_start:
 
 
 label fiance_gone:
-    scene 
+    scene bg_black
     with fade
 
     "{i}S H A N K !{/i}"
