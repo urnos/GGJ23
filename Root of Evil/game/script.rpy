@@ -118,6 +118,10 @@ label start:
 
     p "Yes, I did. Maybe we can talk about it!" 
 
+    stop music fadeout 1.0 
+
+    play sound sfx_qanda fadein 0.1
+
     jump mpp1_interview
 
 
@@ -125,9 +129,14 @@ label start:
 label mpp1_interview:
     #interview segment
 
-    stop music fadeout 1.5
+    #when the sfx is done then fade in bgm music 
 
-    play  music bg_mpp1_qanda fadein 2.0 volume 0.5
+    define qabgm_isPlaying = False
+    #start the track only if the q&a bgm isn't playing
+    if qabgm_isPlaying == False:
+        play  music bg_mpp1_qanda fadeout 1.5 fadein 2.0 volume 0.5
+        #turn q&a music toggle on 
+        $ qabgm_isPlaying = True
 
     show exp_v_question_reversed at right_back_bubble behind villainess_default
     menu: 
