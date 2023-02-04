@@ -6,6 +6,8 @@
 # Introduction scene, Main plot point 1
 
 label start:
+    
+    play music bg_default
 
     scene bg_greenhouse
 
@@ -31,7 +33,13 @@ label start:
     
     p "Someone to talk to."
 
+    stop music fadeout 1.2
+
+    play sound sfx_click
+
     "{i}Click.{/i}"
+
+    play music bg_v_mad
 
     p "Who's that?"
 
@@ -108,7 +116,7 @@ label start:
 
     v "You heard that?"
 
-    p "Yes, I did. Maybe we can talk about it!"
+    p "Yes, I did. Maybe we can talk about it!" 
 
     jump mpp1_interview
 
@@ -116,6 +124,10 @@ label start:
    
 label mpp1_interview:
     #interview segment
+
+    stop music fadeout 1.5
+
+    play  music bg_mpp1_qanda fadein 2.0 volume 0.5
 
     show exp_v_question_reversed at right_back_bubble behind villainess_default
     menu: 

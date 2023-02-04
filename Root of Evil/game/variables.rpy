@@ -3,6 +3,11 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+define audio.bg_default = "sound/default_bg.mp3"
+define audio.sfx_click = "sound/sfx_click.mp3"
+define audio.bg_v_mad = "sound/v_mad.mp3"
+define audio.bg_mpp1_qanda = "sound/mpp1_qanda.mp3"
+
 define p = Character("Plant", color="#27824B")
 define v = Character("Villainess", color="#B22732")
 

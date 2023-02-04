@@ -1,32 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 56, in script
-    show eileen happy at slightleft
-  File "game/script.rpy", line 56, in <module>
-    show eileen happy at slightleft
-NameError: name 'slightleft' is not defined
+  File "game/script.rpy", line 130, in script
+    play  music bg_mpp1_qanada
+  File "renpy/common/000statements.rpy", line 123, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "game/script.rpy", line 130, in <module>
+    play  music bg_mpp1_qanada
+NameError: name 'bg_mpp1_qanada' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 56, in script
-    show eileen happy at slightleft
-  File "C:\Users\Lori\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 1408, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\Lori\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 1367, in show_imspec
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "C:\Users\Lori\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 1367, in <listcomp>
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "C:\Users\Lori\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
+  File "game/script.rpy", line 130, in script
+    play  music bg_mpp1_qanada
+  File "C:\Users\vanes\Downloads\Setups\renpy-8.0.3-sdk\renpy\ast.py", line 2232, in execute
+    self.call("execute")
+  File "C:\Users\vanes\Downloads\Setups\renpy-8.0.3-sdk\renpy\ast.py", line 2220, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\vanes\Downloads\Setups\renpy-8.0.3-sdk\renpy\statements.py", line 281, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 123, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "C:\Users\vanes\Downloads\Setups\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
     return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Lori\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
+  File "C:\Users\vanes\Downloads\Setups\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 56, in <module>
-    show eileen happy at slightleft
-NameError: name 'slightleft' is not defined
+  File "game/script.rpy", line 130, in <module>
+    play  music bg_mpp1_qanada
+NameError: name 'bg_mpp1_qanada' is not defined
 
-Windows-10-10.0.19045 AMD64
+Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
 Root of Evil 1.0
-Thu Feb  2 20:33:08 2023
+Sat Feb  4 11:37:52 2023
