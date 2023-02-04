@@ -10,6 +10,7 @@ label mpp2_start:
     play music bg_default
 
     scene bg_greenhouse
+    with fade
 
     p "It's been some time since the Duchess began to visit me in the garden."
     p "She always comes in the day when nobody else is around. Usually telling others to leave if they end up hearing our conversations."
