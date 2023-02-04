@@ -36,12 +36,13 @@ label start:
     p "Who's that?"
 
     show villainess_default at right
+    with dissolve
 
-    show exp_p_question at plant_bubble
+    show exp_p_question at plant_bubble zorder 1 onlayer screens
     show villainess_default
 
-    p "Is that the duchess?"
-    hide exp_p_question
+    p "Is that the Duchess?"
+    hide exp_p_question onlayer screens
 
     p "I hear the gardeners talk about her when she's not around."
 
@@ -49,10 +50,10 @@ label start:
 
     p "How can someone be cold? It's so warm inside."
 
-    show exp_p_exclaim at plant_bubble
+    show exp_p_exclaim onlayer screens at plant_bubble zorder 1
     p "Oh! She's coming."
+    hide exp_p_exclaim onlayer screens
 
-    hide exp_p_exclaim
     show exp_v_angry at right_bubble behind villainess_default
     v "I can't believe him. After all the effort I put into this gown."
     hide exp_v_angry
@@ -75,9 +76,9 @@ label start:
 
     v "You need to grow big and tall if you want to survive."
 
-    show exp_p_exclaim at plant_bubble
+    show exp_p_exclaim onlayer screens at plant_bubble zorder 1
     p "I would if I had someone to talk to!"
-    hide exp_p_exclaim
+    hide exp_p_exclaim onlayer screens
 
     show exp_v_question at right_bubble behind villainess_default
     v "..."
@@ -85,9 +86,9 @@ label start:
 
     v "Who said that?"
 
-    show exp_p_exclaim at plant_bubble
+    show exp_p_exclaim onlayer screens at plant_bubble zorder 1
     p "Did she just hear me!?"
-    hide exp_p_exclaim
+    hide exp_p_exclaim onlayer screens
     
     show exp_v_exclaim at right_bubble behind villainess_default
     v "How is this possible? I've heard rumours of plants that can talk but I didn't believe in it!"
@@ -138,15 +139,15 @@ label who_he:
 
     v "We were hosting a ball to celebrate our engagement but he didn't pay attention to me, not once today."
 
-    show exp_p_question at plant_bubble
+    show exp_p_question onlayer screens at plant_bubble zorder 1
     p "What's a fiance?"
-    hide exp_p_question
+    hide exp_p_question onlayer screens
 
     v "A fiance is someone you promise to be married to in the future."
 
-    show exp_p_question at plant_bubble
+    show exp_p_question onlayer screens at plant_bubble zorder 1
     p "Married?"
-    hide exp_p_question
+    hide exp_p_question onlayer screens
 
     v "Marriage is when two people spend the rest of their life together."
 
@@ -171,15 +172,15 @@ label what_gown:
 
     v "It's also called a dress, I was wearing it at the engagement party hoping to impress my fiance."
 
-    show exp_p_question at plant_bubble
+    show exp_p_question onlayer screens at plant_bubble zorder 1
     p "Does everyone wear a gown?"
-    hide exp_p_question
+    hide exp_p_question onlayer screens
 
     v "Well you don't have to wear a gown if you don't want to. Not everyone can wear one."
 
-    show exp_p_question at plant_bubble
+    show exp_p_question onlayer screens at plant_bubble zorder 1
     p "Maybe he also doesn't know what a gown is?"
-    hide exp_p_question
+    hide exp_p_question onlayer screens
 
     v "I would think he does. But maybe you're right. He might as well not know."
 
@@ -215,9 +216,9 @@ label move_on:
 
     v "It's a little more complex then that."
 
-    show exp_p_question at plant_bubble
+    show exp_p_question onlayer screens at plant_bubble zorder 1
     p "Is it?"
-    hide exp_p_question
+    hide exp_p_question onlayer screens
 
     show exp_v_angry at right_bubble behind villainess_default
     v "It was our engagement party, how could he have not seen his soon to be wife."
@@ -229,9 +230,9 @@ label move_on:
 
     v "{i}Sigh{/i}. I suppose you have a point."
 
-    show exp_p_exclaim at plant_bubble
+    show exp_p_exclaim onlayer screens at plant_bubble zorder 1
     p "Just let it go, you always have tomorrow to see him!"
-    hide exp_p_exclaim
+    hide exp_p_exclaim onlayer screens
 
     v "You're right."
 
@@ -253,9 +254,9 @@ label confront:
 
     v "I think you have a point."
 
-    show exp_p_exclaim at plant_bubble
+    show exp_p_exclaim onlayer screens at plant_bubble zorder 1
     p "Just talk it out, you can always talk to him tomorrow!"
-    hide exp_p_exclaim
+    hide exp_p_exclaim onlayer screens
 
     v "You're right."
 
