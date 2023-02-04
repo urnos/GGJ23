@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 72: end of line expected.
-    show bubble uwu at rightish behind villainess default
-                                                  ^
+File "game/script.rpy", line 182: expected menuitem
+    hide exp_v_question
+    ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Feb  2 23:53:07 2023
+Fri Feb  3 22:22:32 2023

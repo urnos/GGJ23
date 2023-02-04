@@ -3,48 +3,11 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define p = Character("Plant", color="#7CFC00")
-define v = Character("Villainess", color="#880808")
-
-image villainess_default = "villainess.png"
-
-image bubble uwu = "bubble_uwu.png"
-
-
-define q1 = False
-define q2 = False
-
-define react1_good = False
-
-transform right:
-    xalign 0.85
-    yalign 1.0
-
-transform right_bubble:
-    xalign 0.6
-    yalign 0.3
-
-transform plant_bubble:
-    xalign 0.10
-    yalign 0.7
-
 # Introduction scene, Main plot point 1
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    # These display lines of dialogue.
-
-    show bubble uwu at plant_bubble
+    scene bg_greenhouse
 
     p "The garden is warm and quiet, with the faint noise of fountains bubbling on the other end of the house."
 
@@ -74,14 +37,11 @@ label start:
 
     show villainess_default at right
 
-    show bubble uwu at right_bubble behind villainess_default
- 
+    show exp_p_question at plant_bubble
+    show villainess_default
 
     p "Is that the duchess?"
-
-    p "What's she doing here?"
-
-    p "I've seen her around before. She visits the garden pretty often."
+    hide exp_p_question
 
     p "I hear the gardeners talk about her when she's not around."
 
@@ -89,9 +49,13 @@ label start:
 
     p "How can someone be cold? It's so warm inside."
 
+    show exp_p_exclaim at plant_bubble
     p "Oh! She's coming."
 
+    hide exp_p_exclaim
+    show exp_v_angry at right_bubble behind villainess_default
     v "I can't believe him. After all the effort I put into this gown."
+    hide exp_v_angry
 
     v "Not even a glance. A head turn would have been enough for me."
 
@@ -99,16 +63,62 @@ label start:
 
     v "{i}Sigh{/i}. I don't understand why he didn't look at me today."
 
+    show exp_v_question at right_bubble behind villainess_default
     v "Hm? is this a new plant?"
+    hide exp_v_question
 
     v "I've never seen you before."
+
+    v "What a small sprout."
+
+    v "Your roots must still be growing if your that small."
+
+    v "You need to grow big and tall if you want to survive."
+
+    show exp_p_exclaim at plant_bubble
+    p "I would if I had someone to talk to!"
+    hide exp_p_exclaim
+
+    show exp_v_question at right_bubble behind villainess_default
+    v "..."
+    hide exp_v_question
+
+    v "Who said that?"
+
+    show exp_p_exclaim at plant_bubble
+    p "Did she just hear me!?"
+    hide exp_p_exclaim
+    
+    show exp_v_exclaim at right_bubble behind villainess_default
+    v "How is this possible? I've heard rumours of plants that can talk but I didn't believe in it!"
+    hide exp_v_exclaim
+
+    p "It's true! I've always been able to talk too!"
+
+    show exp_v_question at right_bubble behind villainess_default
+    v "You have?"
+    hide exp_v_question
+
+    p "Of course!"
+
+    p "I won't be so lonely now that I can talk to you!"
+
+    p "You can talk to me too. I heard you talking to yourself!"
+
+    v "You heard that?"
+
+    p "Yes, I did. Maybe we can talk about it!"
+
+    jump mpp1_interview
 
 
    
 label mpp1_interview:
     #interview segment
 
+    show exp_v_question_reversed at right_back_bubble behind villainess_default
     menu: 
+        
         v "What did you want to talk about?"
 
         "Who's He?" if q1 == False:
@@ -118,12 +128,37 @@ label mpp1_interview:
             jump what_gown
 
     if q1 == True and q2 == True:
-        jump idk_1
+        jump question_finish_1
 
 
 #option 1: who's he?
 label who_he: 
+    hide exp_v_question_reversed
     v "I was referring to my fiance."
+
+    v "We were hosting a ball to celebrate our engagement but he didn't pay attention to me, not once today."
+
+    show exp_p_question at plant_bubble
+    p "What's a fiance?"
+    hide exp_p_question
+
+    v "A fiance is someone you promise to be married to in the future."
+
+    show exp_p_question at plant_bubble
+    p "Married?"
+    hide exp_p_question
+
+    v "Marriage is when two people spend the rest of their life together."
+
+    v "They grow together and support each other."
+
+    p "Together. For the rest of their lives..."
+
+    p "Why not get married now?"
+
+    show exp_v_joy at right_bubble behind villainess_default
+    v "Hehe, getting married takes time, there's a lot of things to be prepared before then."
+    hide exp_v_joy
 
     $ q1 = True
 
@@ -131,38 +166,98 @@ label who_he:
 
 #option 2: what's a gown?
 label what_gown: 
+    hide exp_v_question_reversed
     v "A gown is what I'm wearing right now."
+
+    v "It's also called a dress, I was wearing it at the engagement party hoping to impress my fiance."
+
+    show exp_p_question at plant_bubble
+    p "Does everyone wear a gown?"
+    hide exp_p_question
+
+    v "Well you don't have to wear a gown if you don't want to. Not everyone can wear one."
+
+    show exp_p_question at plant_bubble
+    p "Maybe he also doesn't know what a gown is?"
+    hide exp_p_question
+
+    v "I would think he does. But maybe you're right. He might as well not know."
 
     $ q2 = True
 
     jump mpp1_interview
 
-
-label idk_1:
+#after asking both questions
+label question_finish_1:
+    hide exp_v_question_reversed
     v "I just wish he paid attention to me today."
     v "He seemed so distant tonight."
-    v "What should I do?"
+    show exp_v_frustrated at right_bubble behind villainess_default
+    v "I don't know..."
+    hide exp_v_frustrated
     
     #reaction choices
     menu:
 
-        "Move on":
+        "Let it go":
             jump move_on
 
-        "Confront":
+        "Talk about it":
             jump confront
 
-#option 1: move on (good)
+#option 1: let it go (good)
 label move_on:
-    p "From what I heard, it sounds like it might be your imagination."
+    p "I think you should let it go."
+
+    p "From what I hear, some people can't see things that are right in from of them."
+
+    p "Not sure how, but I remember someone coming in here and saying that."
+
+    v "It's a little more complex then that."
+
+    show exp_p_question at plant_bubble
+    p "Is it?"
+    hide exp_p_question
+
+    show exp_v_angry at right_bubble behind villainess_default
+    v "It was our engagement party, how could he have not seen his soon to be wife."
+    hide exp_v_angry
+
+    v "He spent his time talking to other people."
+
+    p "Maybe he was too busy to notice. I don't think a gown is something that would stop you from being together. You might be thinking too much."
+
+    v "{i}Sigh{/i}. I suppose you have a point."
+
+    show exp_p_exclaim at plant_bubble
+    p "Just let it go, you always have tomorrow to see him!"
+    hide exp_p_exclaim
+
+    v "You're right."
 
     $ react1_good = True
 
     jump mpp1_end
 
-#option 2: confront (bad)
+#option 2: talk about it (bad)
 label confront:
-    p "From what I heard, I think you should talk to him about it."
+    p "I think you should talk to him about it."
+
+    p "Maybe he didn't realize the gown you were wearing."
+
+    show exp_v_angry at right_bubble behind villainess_default
+    v "But how could he? He's my fiance, you don't just forget about your soon wife-to-be like that."
+    hide exp_v_angry
+
+    p "Why don't you talk to him about it? It seems like you are really mad about it. "
+
+    v "I think you have a point."
+
+    show exp_p_exclaim at plant_bubble
+    p "Just talk it out, you can always talk to him tomorrow!"
+    hide exp_p_exclaim
+
+    v "You're right."
 
     $ react1_good = False
 
