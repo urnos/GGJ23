@@ -134,7 +134,7 @@ label mpp1_interview:
     define qabgm_isPlaying = False
     #start the track only if the q&a bgm isn't playing
     if qabgm_isPlaying == False:
-        play  music bg_mpp1_qanda fadeout 1.5 fadein 2.0 volume 0.5
+        play  music bg_mpp1_qanda fadeout 2.0 
         #turn q&a music toggle on 
         $ qabgm_isPlaying = True
 
