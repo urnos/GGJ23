@@ -266,7 +266,7 @@ label mpp2_start:
 
         p "Goodbye and goodluck!"
 
-         stop music fadeout 2.0
+        stop music fadeout 2.0
 
         scene bg_time_next_day
         with dissolve
