@@ -18,6 +18,7 @@ define audio.sfx_noqanda = "sound/sfx_noqanda.mp3"
 define audio.sfx_heartbeat = "sound/sfx_heartbeat.mp3"
 define audio.sfx_stab = "sound/sfx_stab.mp3"
 define audio.sfx_thud = "sound/sfx_thud.mp3"
+define audio.sfx_scream = "sound/sfx_scream.mp3"
 
 define p = Character("Plant", color="#27824B")
 define v = Character("Villainess", color="#B22732")
