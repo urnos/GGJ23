@@ -1,17 +1,21 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 123, in script
-    play sounds sfx_qanda fadein 0.1
+  File "game/mpp3.rpy", line 130, in script
+    play music sfx_heartbeat
   File "renpy/common/000statements.rpy", line 123, in execute_play_music
     renpy.music.play(_audio_eval(p["file"]),
-Exception: Audio channel 'sounds' is unknown.
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "game/mpp3.rpy", line 130, in <module>
+    play music sfx_heartbeat
+NameError: name 'sfx_heartbeat' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 123, in script
-    play sounds sfx_qanda fadein 0.1
+  File "game/mpp3.rpy", line 130, in script
+    play music sfx_heartbeat
   File "C:\Users\vanes\Downloads\Setups\renpy-8.0.3-sdk\renpy\ast.py", line 2232, in execute
     self.call("execute")
   File "C:\Users\vanes\Downloads\Setups\renpy-8.0.3-sdk\renpy\ast.py", line 2220, in call
@@ -20,13 +24,17 @@ Full traceback:
     return method(parsed, *args, **kwargs)
   File "renpy/common/000statements.rpy", line 123, in execute_play_music
     renpy.music.play(_audio_eval(p["file"]),
-  File "C:\Users\vanes\Downloads\Setups\renpy-8.0.3-sdk\renpy\audio\music.py", line 103, in play
-    c = get_channel(channel)
-  File "C:\Users\vanes\Downloads\Setups\renpy-8.0.3-sdk\renpy\audio\audio.py", line 915, in get_channel
-    raise Exception("Audio channel %r is unknown." % name)
-Exception: Audio channel 'sounds' is unknown.
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "C:\Users\vanes\Downloads\Setups\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\vanes\Downloads\Setups\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/mpp3.rpy", line 130, in <module>
+    play music sfx_heartbeat
+NameError: name 'sfx_heartbeat' is not defined
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
 Root of Evil 1.0
-Sat Feb  4 15:00:27 2023
+Sat Feb  4 19:19:11 2023

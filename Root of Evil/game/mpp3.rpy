@@ -30,9 +30,11 @@ label mpp3_start:
     p "I hear more footsteps this time."
     p "Wonder if the gardeners are back."
 
+    play music bg_finale
+
     show villainess_default at right
     with dissolve
-    v "Ok, were alone now. What did you want to talk about?"
+    v "Ok, we're alone now. What did you want to talk about?"
 
     show exp_p_question onlayer screens at plant_bubble zorder 1
     p "Is that the Duchess? Who is she talking to?"
@@ -42,8 +44,10 @@ label mpp3_start:
 
     v "What are you talking about?"
 
-    f "I know what you did."
     f "You think I wouldn't hear about it?"
+
+    v "I'm not sure I know what you are talk-"
+
     f "That you slapped her?"
 
     show exp_v_exclaim at right_bubble behind villainess_default
@@ -51,30 +55,41 @@ label mpp3_start:
     hide exp_v_exclaim
     v "Wha-"
 
-    f "Why would you go after her like that? I can't believe yo-"
+    f "You harrased her! I can't believe yo-'"
 
     show exp_v_exclaim at right_bubble behind villainess_default
     v "You can't believe me?! I can't believe your behaviour recently!"
     v "Jumping to her aid instead of your actual fiancee. Your wife-to-be."
-    v "You're always around that girl!"
+    v "You're always with her!"
     hide exp_v_exclaim
 
-    v "The two of you seem awfully close..."
-    v "Would you care to explain why you seem to care more for her than the woman your engaged to?"
+    v "You think I wouldn't notice!"
+    v "How awfully close the two of you are..."
+
+    f "..."
+
+    v "Would you care to explain yourself on why you seem to care more for her than me?"
 
     f "That's exactly what I'm here to talk to you about."
-    f "And you're right, the two of us are close."
+
+    show exp_v_question at right_bubble behind villainess_default
+    v "...?"
+    hide exp_v_question
+
+    f "You're right, the two of us are close."
     f "I've only known her for a short period of time but I feel closer to her than I've ever felt with you in our entire relationship."
 
     v "What are you saying...."
 
-    f "We're in love."
+    f "I love her."
 
     show exp_v_exclaim at right_bubble behind villainess_default
     v "!!"
     hide exp_v_exclaim
 
-    f "And I want to cancel the engagement."
+    f "She knows the real me."
+    f "..."
+    f "I want to our engagement agreement."
     f "We're no longer getting married."
 
     show exp_v_exclaim at right_bubble behind villainess_default
@@ -82,13 +97,13 @@ label mpp3_start:
     hide exp_v_exclaim
 
     f "I apologize for not saying anything sooner."
-    f "Save you the trouble of doubting my loyalty."
-    f "But this relationship between us is over."
-    f "Goodbye."
+    f "I don't want you to misunderstand me"
+    f "I can't lie to myself anymore. I want to be with her."
+    f "Farewell."
 
     p "He's leaving."
     show exp_p_question onlayer screens at plant_bubble zorder 1
-    p "What's that in the Duchesses hand?"
+    p "What's that in the Duchess' hand?"
     p "A gardening knife?"
     hide exp_p_question onlayer screens
     p "There's something radiating off the Duchess."
@@ -102,6 +117,7 @@ label mpp3_start:
     v "To let."
     v "Anybody else..."
     v "H A V E Y O U!!!"
+    stop music
 
     jump fiance_gone
 
@@ -110,6 +126,8 @@ label mpp3_start:
 label fiance_gone:
     scene bg_black
     with fade
+    
+    play music sfx_heartbeat 
 
     "{i}S H A N K !{/i}"
 
@@ -134,8 +152,13 @@ label fiance_gone:
     v "Y...You...Killed...H-"
     v "..Why?"
 
+    stop music
+
+    play sound sfx_noqanda
+
     #reaction choices
     menu:
+  
         "Isn't this what you wanted?":
             jump mpp3_end
 
@@ -149,8 +172,6 @@ label mpp3_end:
 
     #END
     #We can put an ending card here if we want, otherwise it just goes back to the title screen ^^
-
-    stop music fadeout 2.0
 
     # This ends the game.
     return

@@ -10,9 +10,12 @@ define audio.bg_v_mad = "sound/v_mad.mp3"
 define audio.bg_mpp1_qanda = "sound/mpp1_qanda.mp3"
 define audio.bg_mpp2_qanda = "sound/mpp2_qanda.mp3"
 define audio.bg_v_jealous = "sound/v_jealous.mp3"
+define audio.bg_finale = "sound/mpp3_finale.mp3"
 
 define audio.sfx_click = "sound/sfx_click.mp3"
 define audio.sfx_qanda = "sound/sfx_qanda.wav"
+define audio.sfx_noqanda = "sound/sfx_noqanda.mp3"
+define audio.sfx_heartbeat = "sound/sfx_heartbeat.mp3"
 
 define p = Character("Plant", color="#27824B")
 define v = Character("Villainess", color="#B22732")

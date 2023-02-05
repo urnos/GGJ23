@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/mpp2.rpy", line 203: expected end of line
-    stop music bg_v_jealous fadeout 2.0
+File "game/mpp3.rpy", line 155: expected end of line
+    stop music sfx_heartbeat
                ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Feb  4 15:52:32 2023
+Sat Feb  4 19:17:08 2023
