@@ -123,14 +123,18 @@ label fiance_gone:
     scene bg_black
     with fade
     
-    play music sfx_heartbeat 
+    play sound sfx_stab 
 
     "{i}S H A N K !{/i}"
+    
+    play music sfx_heartbeat
 
     f "Agh!"
     f "!!!"
     f "I...I..I'm..."
     f "...S...So....r...ry..."
+
+    play sound sfx_thud
 
     "{i}Thud{/i}"
 
