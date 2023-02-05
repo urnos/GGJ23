@@ -19,6 +19,7 @@ define audio.sfx_heartbeat = "sound/sfx_heartbeat.mp3"
 
 define p = Character("Plant", color="#27824B")
 define v = Character("Villainess", color="#B22732")
+define f = Character("Fiance", color="#274082")
 
 image villainess_default = "villainess.png"
 
@@ -36,6 +37,11 @@ image exp_p_frustrated = "exp_p_frustrated.png"
 image exp_p_question = "exp_p_question.png"
 
 image bg_greenhouse = "TempBG_RoF.png"
+image bg_black = "TempBG_Black.png"
+image bg_endcard = "End_card.png"
+image bg_time_days = "SeveralDaysLater_Card.png"
+image bg_time_hours = "SeveralHoursLater_Card.png"
+image bg_time_next_day = "theFollowingDay_Card.png"
 
 define q1 = False
 define q2 = False

@@ -293,4 +293,9 @@ label mpp1_end:
     v "Perhaps I will keep our conversations a secret, who knows how other people will react to find that I talk to plants when I'm alone, haha."
 
     stop music fadeout 1.0
+
+    scene bg_time_days
+    with dissolve
+    $ renpy.pause () 
+
     jump mpp2_start

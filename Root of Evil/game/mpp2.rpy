@@ -266,5 +266,9 @@ label mpp2_start:
 
         p "Goodbye and goodluck!"
 
+        scene bg_time_next_day
+        with dissolve
+        $ renpy.pause () 
+
         stop music fadeout 2.0
         jump mpp3_start 

@@ -5,10 +5,6 @@
 
 # Main plot point 3
 
-#These can be moved to Variable script
-define f = Character("Fiance", color="#ffffff")
-image bg_black = "TempBG_Black.png"
-
 label mpp3_start:
     play music bg_default
 
@@ -89,7 +85,7 @@ label mpp3_start:
 
     f "She knows the real me."
     f "..."
-    f "I want to our engagement agreement."
+    f "I want to annul our engagement agreement."
     f "We're no longer getting married."
 
     show exp_v_exclaim at right_bubble behind villainess_default
@@ -97,7 +93,7 @@ label mpp3_start:
     hide exp_v_exclaim
 
     f "I apologize for not saying anything sooner."
-    f "I don't want you to misunderstand me"
+    f "I don't want you to misunderstand me."
     f "I can't lie to myself anymore. I want to be with her."
     f "Farewell."
 
@@ -172,6 +168,8 @@ label mpp3_end:
 
     #END
     #We can put an ending card here if we want, otherwise it just goes back to the title screen ^^
+    scene bg_endcard
+    $ renpy.pause () 
 
     # This ends the game.
     return
