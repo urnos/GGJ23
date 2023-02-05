@@ -12,50 +12,36 @@ label start:
     scene bg_greenhouse
 
     p "The garden is warm and quiet, with the faint noise of fountains bubbling on the other end of the house."
-
     p "The silence is comforting when you think about it."
-
     p "But it can drive a plant mad."
-
     p "If you've lived in this house for as long as I have, you would understand how lonely it can be."
-     
     p "Especially when you're surrounded by hundreds of your own kind."
-     
     p "Nobody listens to me."
-     
     p "I've tried calling out for days but no luck finding someone."
-    
     p "Even the humans that tend to us."
-    
     p "I can't get their attention at all."
-    
     p "If only I could just have one conversation."
-    
-    p "Someone to talk to."
+    p "Someone to talk to..."
 
     stop music fadeout 1.2
 
     play sound sfx_click
-
     "{i}Click.{/i}"
 
     play music bg_v_mad
 
+    show exp_p_question onlayer screens at plant_bubble zorder 1
     p "Who's that?"
+    hide exp_p_question onlayer screens
 
     show villainess_default at right
     with dissolve
 
-    show exp_p_question at plant_bubble zorder 1 onlayer screens
     show villainess_default
 
     p "Is that the Duchess?"
-    hide exp_p_question onlayer screens
-
     p "I hear the gardeners talk about her when she's not around."
-
     p "Most of the time they say how cold she can be but I don't understand why?"
-
     p "How can someone be cold? It's so warm inside."
 
     show exp_p_exclaim onlayer screens at plant_bubble zorder 1
@@ -68,20 +54,20 @@ label start:
 
     v "Not even a glance. A head turn would have been enough for me."
 
+    show exp_p_question onlayer screens at plant_bubble zorder 1
     p "Did something happen?"
+    hide exp_p_question onlayer screens
 
     v "{i}Sigh{/i}. I don't understand why he didn't look at me today."
 
     show exp_v_question at right_bubble behind villainess_default
-    v "Hm? is this a new plant?"
+    v "Hm?"
+    v "Is this a new plant?"
     hide exp_v_question
 
     v "I've never seen you before."
-
     v "What a small sprout."
-
     v "Your roots must still be growing if your that small."
-
     v "You need to grow big and tall if you want to survive."
 
     show exp_p_exclaim onlayer screens at plant_bubble zorder 1
@@ -99,7 +85,8 @@ label start:
     hide exp_p_exclaim onlayer screens
     
     show exp_v_exclaim at right_bubble behind villainess_default
-    v "How is this possible? I've heard rumours of plants that can talk but I didn't believe in it!"
+    v "How is this possible?!" 
+    v "I've heard rumours of plants that can talk but I didn't believe in it!"
     hide exp_v_exclaim
 
     p "It's true! I've always been able to talk too!"
@@ -109,17 +96,16 @@ label start:
     hide exp_v_question
 
     p "Of course!"
-
     p "I won't be so lonely now that I can talk to you!"
-
     p "You can talk to me too. I heard you talking to yourself!"
 
+    show exp_v_question at right_bubble behind villainess_default
     v "You heard that?"
+    hide exp_v_question
 
     p "Yes, I did. Maybe we can talk about it!" 
 
     stop music fadeout 1.0 
-
     play sound sfx_qanda fadein 0.1
 
     jump mpp1_interview
@@ -158,7 +144,7 @@ label who_he:
     hide exp_v_question_reversed
     v "I was referring to my fiance."
 
-    v "We were hosting a ball to celebrate our engagement but he didn't pay attention to me, not once today."
+    v "We were hosting a ball to accounce our engagement but he didn't pay attention to me, not once today."
 
     show exp_p_question onlayer screens at plant_bubble zorder 1
     p "What's a fiance?"
@@ -171,11 +157,9 @@ label who_he:
     hide exp_p_question onlayer screens
 
     v "Marriage is when two people spend the rest of their life together."
-
     v "They grow together and support each other."
 
     p "Together. For the rest of their lives..."
-
     p "Why not get married now?"
 
     show exp_v_joy at right_bubble behind villainess_default
@@ -190,7 +174,6 @@ label who_he:
 label what_gown: 
     hide exp_v_question_reversed
     v "A gown is what I'm wearing right now."
-
     v "It's also called a dress, I was wearing it at the engagement party hoping to impress my fiance."
 
     show exp_p_question onlayer screens at plant_bubble zorder 1
@@ -203,7 +186,8 @@ label what_gown:
     p "Maybe he also doesn't know what a gown is?"
     hide exp_p_question onlayer screens
 
-    v "I would think he does. But maybe you're right. He might as well not know."
+    v "I would think he does..." 
+    v "But maybe you're right. He might as well not know."
 
     $ q2 = True
 
@@ -230,11 +214,9 @@ label question_finish_1:
 #option 1: let it go (good)
 label move_on:
     p "I think you should let it go."
-
     p "From what I hear, some people can't see things that are right in from of them."
-
     p "Not sure how, but I remember someone coming in here and saying that."
-
+    
     v "It's a little more complex then that."
 
     show exp_p_question onlayer screens at plant_bubble zorder 1
@@ -247,7 +229,8 @@ label move_on:
 
     v "He spent his time talking to other people."
 
-    p "Maybe he was too busy to notice. I don't think a gown is something that would stop you from being together. You might be thinking too much."
+    p "Maybe he was too busy to notice." 
+    p "I don't think a gown is something that would stop you from being together. You might be thinking too much."
 
     v "{i}Sigh{/i}. I suppose you have a point."
 
@@ -264,7 +247,6 @@ label move_on:
 #option 2: talk about it (bad)
 label confront:
     p "I think you should talk to him about it."
-
     p "Maybe he didn't realize the gown you were wearing."
 
     show exp_v_angry at right_bubble behind villainess_default
@@ -287,10 +269,21 @@ label confront:
 
 label mpp1_end:
     v "You know, I never would have thought talking to a plant would make me feel better."
+
+    show exp_p_joy onlayer screens at plant_bubble zorder 1
     p "Anytime! I'm happy to help."
+    hide exp_p_joy onlayer screens
+
+    show exp_v_question at right_bubble behind villainess_default
     v "Would you be willing to talk again?"
+    hide exp_v_question 
+
     p "Always!"
-    v "Perhaps I will keep our conversations a secret, who knows how other people will react to find that I talk to plants when I'm alone, haha."
+
+    v "Perhaps I will keep our conversations a secret." 
+    show exp_v_joy at right_bubble behind villainess_default
+    v "Who knows how other people will react to find that I talk to plants when I'm alone, haha."
+    hide exp_v_joy
 
     stop music fadeout 1.0
 
