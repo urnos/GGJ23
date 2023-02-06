@@ -24,7 +24,17 @@ define p = Character("Plant", color="#27824B")
 define v = Character("Villainess", color="#B22732")
 define f = Character("Fiance", color="#274082")
 
-image villainess_default = "villainess.png"
+image v_mpp1 = "v_mpp1.png"
+
+image v_mpp2_default = "v_mpp2_default.png"
+image v_mpp2_angry = "v_mpp2_angry.png"
+image v_mpp2_upset = "v_mpp2_upset.png"
+image v_mpp2_happy = "v_mpp2_happy.png"
+
+image v_mpp3_default = "v_mpp3_default.png"
+image v_mpp3_angry = "v_mpp3_angry.png"
+image v_mpp3_shock = "v_mpp3_shock.png"
+image v_mpp3_livid = "v_mpp3_livid.png"
 
 image exp_v_joy = "exp_v_joy.png"
 image exp_v_exclaim = "exp_v_exclaim.png"

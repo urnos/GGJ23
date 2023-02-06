@@ -28,8 +28,7 @@ label mpp3_start:
 
     play music bg_finale
 
-    show villainess_default at right
-    with dissolve
+    show v_mpp2_default at right with dissolve
 
     v "Ok, we're alone now."
     
@@ -54,12 +53,15 @@ label mpp3_start:
     f "That you slapped her?!"
 
     show exp_v_exclaim at right_bubble behind villainess_default
+    show v_mpp3_default at right with dissolve
+    hide v_mpp2_default
+    v "Wha-"
     v "!!"
     hide exp_v_exclaim
-    v "Wha-"
 
     f "You harrased her! I can't believe yo-'"
-
+    hide v_mpp3_default
+    show v_mpp3_angry at right
     show exp_v_exclaim at right_bubble behind villainess_default
     v "You can't believe me?! I can't believe your behaviour recently!"
     v "Jumping to her aid instead of your actual fiancee. Your wife-to-be."
@@ -67,7 +69,7 @@ label mpp3_start:
     v "You think I wouldn't notice!"
     hide exp_v_exclaim
 
-    v "How awfully close the two of you are..."
+    v "How awfully close the two of you are?!"
 
     f "..."
 
@@ -90,6 +92,7 @@ label mpp3_start:
 
     f "I love her."
 
+    show v_mpp3_angry at right
     show exp_v_exclaim at right_bubble behind villainess_default
     v "!!"
     hide exp_v_exclaim
@@ -107,6 +110,8 @@ label mpp3_start:
     f "I can't lie to myself anymore. I want to be with her."
     f "Farewell."
 
+    hide v_mpp3_angry with dissolve
+
     p "{i}He's leaving.{/i}"
     show exp_p_question onlayer screens at plant_bubble zorder 1
     p "{i}What's that in the Duchess' hand?{/i}"
@@ -115,8 +120,8 @@ label mpp3_start:
     p "{i}There's something radiating off the Duchess.{/i}"
     p "{i}And it's resonating inside of....{/i}"
 
+    show v_mpp3_livid at right with dissolve
     v "Hah...Hah...."
-
     v "Where do you think you're going?"
     v "You can't just walk away from me like this!"
     v "I can't give you up so easily!"
@@ -124,9 +129,10 @@ label mpp3_start:
     v "{b}{i}To let..."
     v "{b}{i}Anybody else..."
     v "{size=+10}{b}{i}H A V E {space=10} Y O U!!!{/i}{/b}{/size}"
-
+    
     stop music
-
+    hide v_mpp3_angry
+    hide v_mpp3_livid
     jump fiance_gone
 
 
@@ -150,7 +156,7 @@ label fiance_gone:
 
     "{i}Thud{/i}"
 
-    show villainess_default at right with dissolve 
+    show v_mpp3_shock at right
     show exp_v_exclaim at right_bubble behind villainess_default
     v "!!!!!!!"
     hide exp_v_exclaim
@@ -181,7 +187,7 @@ label mpp3_end:
     p "Now..."
     p "I can finally..."
 
-    hide villainess_default at right with dissolve
+    hide v_mpp3_shock at right with dissolve
     play sound sfx_scream fadeout 0.25
 
     p "{b}{i}{size=+10}Bloom.{/i}{/b}{/size}"       

@@ -34,10 +34,10 @@ label start:
     p "Who's that?"
     hide exp_p_question onlayer screens
 
-    show villainess_default at right
+    show v_mpp1 at right
     with dissolve
 
-    show villainess_default
+    show v_mpp1
 
     p "Is that the Duchess?"
     p "I hear the gardeners talk about her when she's not around."
@@ -48,7 +48,7 @@ label start:
     p "Oh! She's coming."
     hide exp_p_exclaim onlayer screens
 
-    show exp_v_angry at right_bubble behind villainess_default
+    show exp_v_angry at right_bubble behind v_mpp1
     v "I can't believe him. After all the effort I put into this gown."
     hide exp_v_angry
 
@@ -60,7 +60,7 @@ label start:
 
     v "{i}Sigh{/i}. I don't understand why he didn't look at me today."
 
-    show exp_v_question at right_bubble behind villainess_default
+    show exp_v_question at right_bubble behind v_mpp1
     v "Hm?"
     v "Is this a new plant?"
     hide exp_v_question
@@ -74,7 +74,7 @@ label start:
     p "I would if I had someone to talk to!"
     hide exp_p_exclaim onlayer screens
 
-    show exp_v_question at right_bubble behind villainess_default
+    show exp_v_question at right_bubble behind v_mpp1
     v "..."
     hide exp_v_question
 
@@ -84,14 +84,14 @@ label start:
     p "Did she just hear me!?"
     hide exp_p_exclaim onlayer screens
     
-    show exp_v_exclaim at right_bubble behind villainess_default
+    show exp_v_exclaim at right_bubble behind v_mpp1
     v "How is this possible?!" 
     v "I've heard rumours of plants that can talk but I didn't believe in it!"
     hide exp_v_exclaim
 
     p "It's true! I've always been able to talk too!"
 
-    show exp_v_question at right_bubble behind villainess_default
+    show exp_v_question at right_bubble behind v_mpp1
     v "You have?"
     hide exp_v_question
 
@@ -99,7 +99,7 @@ label start:
     p "I won't be so lonely now that I can talk to you!"
     p "You can talk to me too. I heard you talking to yourself!"
 
-    show exp_v_question at right_bubble behind villainess_default
+    show exp_v_question at right_bubble behind v_mpp1
     v "You heard that?"
     hide exp_v_question
 
@@ -124,7 +124,7 @@ label mpp1_interview:
         #turn q&a music toggle on 
         $ qabgm_isPlaying = True
 
-    show exp_v_question_reversed at right_back_bubble behind villainess_default
+    show exp_v_question_reversed at right_back_bubble behind v_mpp1
     menu: 
         
         v "What did you want to talk about?"
@@ -162,7 +162,7 @@ label who_he:
     p "Together. For the rest of their lives..."
     p "Why not get married now?"
 
-    show exp_v_joy at right_bubble behind villainess_default
+    show exp_v_joy at right_bubble behind v_mpp1
     v "Hehe, getting married takes time, there's a lot of things to be prepared before then."
     hide exp_v_joy
 
@@ -198,7 +198,7 @@ label question_finish_1:
     hide exp_v_question_reversed
     v "I just wish he paid attention to me today."
     v "He seemed so distant tonight."
-    show exp_v_frustrated at right_bubble behind villainess_default
+    show exp_v_frustrated at right_bubble behind v_mpp1
     v "I don't know..."
     hide exp_v_frustrated
     
@@ -223,7 +223,7 @@ label move_on:
     p "Is it?"
     hide exp_p_question onlayer screens
 
-    show exp_v_angry at right_bubble behind villainess_default
+    show exp_v_angry at right_bubble behind v_mpp1
     v "It was our engagement party, how could he have not seen his soon to be wife."
     hide exp_v_angry
 
@@ -249,7 +249,7 @@ label confront:
     p "I think you should talk to him about it."
     p "Maybe he didn't realize the gown you were wearing."
 
-    show exp_v_angry at right_bubble behind villainess_default
+    show exp_v_angry at right_bubble behind v_mpp1
     v "But how could he? He's my fiance, you don't just forget about your soon wife-to-be like that."
     hide exp_v_angry
 
@@ -274,14 +274,14 @@ label mpp1_end:
     p "Anytime! I'm happy to help."
     hide exp_p_joy onlayer screens
 
-    show exp_v_question at right_bubble behind villainess_default
+    show exp_v_question at right_bubble behind v_mpp1
     v "Would you be willing to talk again?"
     hide exp_v_question 
 
     p "Always!"
 
     v "Perhaps I will keep our conversations a secret." 
-    show exp_v_joy at right_bubble behind villainess_default
+    show exp_v_joy at right_bubble behind v_mpp1
     v "Who knows how other people will react to find that I talk to plants when I'm alone, haha."
     hide exp_v_joy
 
