@@ -20,9 +20,11 @@ define audio.sfx_stab = "sound/sfx_stab.mp3"
 define audio.sfx_thud = "sound/sfx_thud.mp3"
 define audio.sfx_scream = "sound/sfx_scream.mp3"
 
-define p = Character("Plant", color="#27824B")
+define p = Character("Plant", color="#27824B", image="plant")
 define v = Character("Villainess", color="#B22732")
 define f = Character("Fiance", color="#274082")
+
+image side plant = "plant.png"
 
 image v_mpp1 = "v_mpp1.png"
 
@@ -74,5 +76,5 @@ transform right_back_bubble:
     yalign 0.1
 
 transform plant_bubble:
-    xalign 0.075
-    yalign 0.7
+    xalign 0.13
+    yalign 0.68
